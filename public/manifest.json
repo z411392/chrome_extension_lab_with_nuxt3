@@ -1,0 +1,45 @@
+{
+    "manifest_version": 3,
+    "name": "Extension Lab",
+    "version": "0.0.1",
+    "icons": {
+        "16": "contents/icons/extension_lab_icon_16x16.png",
+        "32": "contents/icons/extension_lab_icon_32x32.png",
+        "48": "contents/icons/extension_lab_icon_48x48.png",
+        "128": "contents/icons/extension_lab_icon_128x128.png"
+    },
+    "action": {
+        "default_icon": {
+            "16": "contents/icons/extension_lab_icon_16x16.png",
+            "32": "contents/icons/extension_lab_icon_32x32.png",
+            "48": "contents/icons/extension_lab_icon_48x48.png",
+            "128": "contents/icons/extension_lab_icon_128x128.png"
+        },
+        "default_title": "tooltip",
+        "default_popup": "popup/index.html"
+    },
+    "options_ui": {
+        "page": "options/index.html",
+        "open_in_tab": true
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*/*"
+            ],
+            "js": [
+                "contents/js/https/all/all/main.js"
+            ],
+            "css": [
+            ],
+            "run_at": "document_end",
+            "all_frames": false
+        }
+    ],
+    "permissions": [
+        "storage"
+    ],
+    "background": {
+        "service_worker": "service_worker.js"
+    }
+}

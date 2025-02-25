@@ -10,8 +10,13 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "jquery": "^3.7.1",
     "nuxt": "^3.15.4",
     "vue": "latest",
     "vue-router": "latest"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.1.0",
+    "@types/jquery": "^3.5.32"
   }
 }
